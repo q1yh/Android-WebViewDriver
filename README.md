@@ -1,4 +1,4 @@
-# webviewdriver
+# Android-WebViewDriver
 Here is an example of crawling JS generated content by Android's Chromium-based webview and some Javascript play.
 Actually there are lots of utils for crawling interenet contents either from web service API or all sorts of web pages: 
 - JSoup is pretty good, but cannot execute javascript. 
@@ -7,7 +7,7 @@ Actually there are lots of utils for crawling interenet contents either from web
 But sometimes Chromium-based webview is enough.
 
 
-- 1. Setting WebView in an activity:
+- . Setting WebView in an activity:
 ```
 // Enable Javascript
 WebSettings webSettings = mWebView.getSettings();
@@ -16,7 +16,7 @@ webSettings.setJavaScriptEnabled(true);
 mWebView.addJavascriptInterface(new mJavascriptInterface(this),"jsi");
 ```
 
-- 2. Define Javascript Interface:
+- . Define Javascript Interface:
 ```
 class mJavascriptInterface {
         private Context ctx;
@@ -28,7 +28,7 @@ class mJavascriptInterface {
         }
 ```
 
-- 3. Play: retrive JS generated content through Javascript Interface:
+- . Play: retrive JS generated content through Javascript Interface:
 ```
 public void retriveJSContent(String urlString) {
   mWebView.setWebViewClient(new WebViewClient(){
