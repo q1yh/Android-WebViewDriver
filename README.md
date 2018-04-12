@@ -7,7 +7,7 @@ Actually there are lots of utils for crawling interenet contents either from web
 But sometimes Chromium-based webview is enough.
 
 
-- . Setting WebView in an activity:
+1. Setting WebView in an activity:
 ```
 // Enable Javascript
 WebSettings webSettings = mWebView.getSettings();
@@ -16,7 +16,7 @@ webSettings.setJavaScriptEnabled(true);
 mWebView.addJavascriptInterface(new mJavascriptInterface(this),"jsi");
 ```
 
-- . Define Javascript Interface:
+2. Define Javascript Interface:
 ```
 class mJavascriptInterface {
         private Context ctx;
@@ -28,7 +28,7 @@ class mJavascriptInterface {
         }
 ```
 
-- . Play: retrive JS generated content through Javascript Interface:
+3. Play: retrive JS generated content through Javascript Interface:
 ```
 public void retriveJSContent(String urlString) {
   mWebView.setWebViewClient(new WebViewClient(){
